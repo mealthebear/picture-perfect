@@ -1,0 +1,38 @@
+{
+  "name": "picture-perfect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server",
+    "build": "webpack -w -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mealthebear/picture-perfect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mealthebear/picture-perfect/issues"
+  },
+  "homepage": "https://github.com/mealthebear/picture-perfect#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.0",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "sequelize": "^5.21.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

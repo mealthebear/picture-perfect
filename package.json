@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mealthebear/picture-perfect#readme",
   "dependencies": {
+    "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "axios": "^0.19.0",

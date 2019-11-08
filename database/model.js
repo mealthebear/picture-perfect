@@ -16,6 +16,8 @@ const Client = db.define('client', {
     description: {
         type: Sequelize.STRING
     }
+}, {
+    timestamps: false
 })
 
 Client.sync();

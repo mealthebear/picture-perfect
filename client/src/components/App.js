@@ -1,5 +1,6 @@
 import React from 'react';
 import ClientList from './ClientList.js';
+import ClientForm from './ClientForm.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class App extends React.Component {
         return (
             <div>
                 <ClientList />
+                <ClientForm />
             </div>
         )
     }

@@ -11,6 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <h1>Picture Perfect</h1>
                 <ClientList />
                 <ClientForm />
             </div>

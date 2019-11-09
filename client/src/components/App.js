@@ -30,6 +30,13 @@ class App extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let { firstName, lastName, bill, description } = this.state;
+        axios.post('/api/photo', { firstName, lastName, bill, description })
+             .then((response) => {
+                 console.log(response)
+             })
+             .catch((error) => {
+                 console.log('Uh oh! Couldn\'t submit client info!', error)
+             })
     }
 
     render() {

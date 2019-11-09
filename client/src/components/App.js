@@ -7,7 +7,10 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            firstName: null,
+            lastName: null,
+            bill: null,
+            description: null
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -19,7 +22,7 @@ class App extends React.Component {
     }
 
     handleChange(e) {
-
+        console.log(e.target.value);
     }
 
     handleSubmit(e) {
@@ -31,7 +34,7 @@ class App extends React.Component {
             <div>
                 <h1>Picture Perfect</h1>
                 <ClientList />
-                <ClientForm />
+                <ClientForm onChange={this.handleChange}/>
             </div>
         )
     }

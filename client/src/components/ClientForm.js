@@ -4,13 +4,13 @@ const ClientForm = (props) => (
     <div>
         <form>
             <label>First Name</label>
-            <input type="text" onChange={props.onChange}></input>
+            <input type="text" name="firstName" onChange={props.onChange}></input>
             <label>Last Name</label>
-            <input type="text" onChange={props.onChange}></input>
+            <input type="text" name="lastName" onChange={props.onChange}></input>
             <label>Bill</label>
-            <input type="text" onChange={props.onChange}></input>
+            <input type="text" name="bill" onChange={props.onChange}></input>
             <label>Description</label>
-            <input type="text" onChange={props.onChange}></input>
+            <input type="text" name="description" onChange={props.onChange}></input>
             <input type="submit" value="Submit"></input>
         </form>
     </div>

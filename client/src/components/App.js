@@ -28,7 +28,8 @@ class App extends React.Component {
     }
 
     handleSubmit(e) {
-
+        e.preventDefault();
+        let { firstName, lastName, bill, description } = this.state;
     }
 
     render() {
@@ -36,7 +37,7 @@ class App extends React.Component {
             <div>
                 <h1>Picture Perfect</h1>
                 <ClientList />
-                <ClientForm onChange={this.handleChange}/>
+                <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
             </div>
         )
     }

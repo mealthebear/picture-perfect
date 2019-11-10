@@ -2,10 +2,12 @@ import React from 'react';
 
 const ClientList = (props) => (
     <div>
-        <p>First Name</p>
-        <p>Last Name</p>
-        <p>Cost of Service</p>
-        <p>Description of Service</p>
+        {props.clients.map((client, i) => {
+            return <div key={i}>{client.id}{client.firstName}{client.lastName}
+                <div>{client.bill}</div>
+                <div>{client.description}</div>
+            </div>
+        })}
     </div>
 )
 

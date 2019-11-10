@@ -6,19 +6,15 @@ const {
 
 const getAllController = (req, res) => {
     getAllClients()
-    .then(() => res.status(200).send('Yay got all clients!'))
+    .then((data) => res.status(200).send(data))
     .catch((err) => res.status(400).send('Uh oh! Couldn\'t get all clients!',err))
 }
 
 const addController = (req, res) => {
     let { body } = req;
-    let tempVar = req.body;
-    console.log(req);
-    console.log(req['body']);
-    console.log(body);
-    console.log({ body });
-    console.log(tempVar);
-    // addClient()
+    addClient(body)
+    .then(() => res.status(201).send('Post successful!'))
+    .catch((err) => res.status(401).send('Couldn\'t post!', err));
 }
 
 const updateController = (req, res) => {

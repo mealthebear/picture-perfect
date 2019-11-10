@@ -7,6 +7,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            clients: [],
             firstName: null,
             lastName: null,
             bill: null,
@@ -15,12 +16,16 @@ class App extends React.Component {
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.checkState = this.checkState.bind(this);
     }
 
     componentDidMount() {
         axios.get('/api/photo')
         .then((response) => {
             console.log(response)
+            this.setState({
+                clients: response.data
+            })
         })
         .catch((error) => {
             console.log(error)
@@ -41,11 +46,15 @@ class App extends React.Component {
         .catch((error) => console.log('Uh oh! Couldn\'t submit client info!', error));
     }
 
+    checkState() {
+        console.log(this.state);
+    }
+
     render() {
         return (
             <div>
-                <h1>Picture Perfect</h1>
-                <ClientList />
+                <h1 onClick={this.checkState}>Picture Perfect</h1>
+                <ClientList clients={this.state.clients}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
             </div>
         )

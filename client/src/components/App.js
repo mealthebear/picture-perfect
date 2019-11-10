@@ -16,6 +16,7 @@ class App extends React.Component {
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateClient = this.updateClient.bind(this);
         this.checkState = this.checkState.bind(this);
     }
 
@@ -44,6 +45,14 @@ class App extends React.Component {
         axios.post('/api/photo', { firstName, lastName, bill, description })
         .then((response) => console.log(response))
         .catch((error) => console.log('Uh oh! Couldn\'t submit client info!', error));
+    }
+
+    updateClient() {
+        axios.put('/api/photo', {
+
+        })
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
     }
 
     checkState() {

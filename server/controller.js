@@ -18,7 +18,9 @@ const addController = (req, res) => {
 }
 
 const updateController = (req, res) => {
-
+    updateClient(req.body)
+    .then(() => res.status(202).send('Updated description!'))
+    .catch((err) => res.status(402).send('Couldn\'t update!', err))
 }
 
 const deleteController = (req, res) => {

@@ -48,9 +48,8 @@ class App extends React.Component {
     }
 
     updateClient() {
-        axios.put('/api/photo', {
-
-        })
+        let { description } = this.state;
+        axios.put('/api/photo', { description })
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
     }

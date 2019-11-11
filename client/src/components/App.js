@@ -11,13 +11,16 @@ class App extends React.Component {
             firstName: null,
             lastName: null,
             bill: null,
-            description: null
+            description: null,
+            updateClicked: false
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateClient = this.updateClient.bind(this);
         this.checkState = this.checkState.bind(this);
+        this.renderUpdate = this.renderUpdate.bind(this);
+        this.renderUpdateForm = this.renderUpdateForm.bind(this);
     }
 
     componentDidMount() {
@@ -58,11 +61,23 @@ class App extends React.Component {
         console.log(this.state);
     }
 
+    renderUpdate() {
+        this.setState({
+            updateClicked: true
+        })
+    }
+
+    renderUpdateForm() {
+        this.setState({
+            updateClicked: false
+        })
+    }
+
     render() {
         return (
             <div>
                 <h1 onClick={this.checkState}>Picture Perfect</h1>
-                <ClientList clients={this.state.clients}/>
+                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
             </div>
         )

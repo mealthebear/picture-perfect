@@ -8,6 +8,9 @@ const ClientList = (props) => (
                 <div><h4>{client.description}<button>Update</button></h4></div>
             </div>
         })}
+        <form>
+            <input type="text" name="updateInfo"></input>
+        </form>
     </div>
 )
 

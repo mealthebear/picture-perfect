@@ -12,7 +12,8 @@ class App extends React.Component {
             lastName: null,
             bill: null,
             description: null,
-            updateClicked: false
+            updateClicked: false,
+            updateInfo: null
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);

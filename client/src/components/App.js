@@ -22,6 +22,7 @@ class App extends React.Component {
         this.checkState = this.checkState.bind(this);
         this.renderUpdate = this.renderUpdate.bind(this);
         this.renderUpdateForm = this.renderUpdateForm.bind(this);
+        this.deleteClient = this.deleteClient.bind(this);
     }
 
     componentDidMount() {
@@ -58,6 +59,13 @@ class App extends React.Component {
         .catch((error) => console.log(error));
     }
 
+    deleteClient(e) {
+        let identifier = Number(e.target.attributes[0].nodeValue)
+        axios.delete('/api/photo', { id: identifier })
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
+    }
+
     checkState() {
         console.log(this.state);
     }
@@ -78,7 +86,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1 onClick={this.checkState}>Picture Perfect</h1>
-                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm}/>
+                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
             </div>
         )

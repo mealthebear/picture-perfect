@@ -18,13 +18,17 @@ const addController = (req, res) => {
 }
 
 const updateController = (req, res) => {
-    updateClient(req.body)
+    let { body } = req;
+    updateClient(body)
     .then(() => res.status(202).send('Updated description!'))
     .catch((err) => res.status(402).send('Couldn\'t update!', err))
 }
 
 const deleteController = (req, res) => {
-
+    let { body } = req;
+    deleteClient(body)
+    .then(() => res.status(203).send('Deleted entry!'))
+    .catch((err) => res.status(403).send('Couldn\'t delete!', err))
 }
 
 module.exports = {

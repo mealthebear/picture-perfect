@@ -51,7 +51,10 @@ class App extends React.Component {
         e.preventDefault();
         let { firstName, lastName, bill, description } = this.state;
         axios.post('/api/photo', { firstName, lastName, bill, description })
-        .then((response) => console.log(response))
+        .then((response) => { 
+            console.log(response)
+            this.getEntries()
+        })
         .catch((error) => console.log('Uh oh! Couldn\'t submit client info!', error));
     }
 

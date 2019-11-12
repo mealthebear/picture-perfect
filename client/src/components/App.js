@@ -8,12 +8,12 @@ class App extends React.Component {
         super(props)
         this.state = {
             clients: [],
-            firstName: null,
-            lastName: null,
+            firstName: '',
+            lastName: '',
             bill: null,
-            description: null,
+            description: '',
             updateClicked: false,
-            updateInfo: null
+            updateInfo: ''
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -52,8 +52,8 @@ class App extends React.Component {
     }
 
     updateClient() {
-        let { description } = this.state;
-        axios.put('/api/photo', { description })
+        let { updateInfo } = this.state;
+        axios.put('/api/photo', { updateInfo })
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
     }
@@ -78,7 +78,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1 onClick={this.checkState}>Picture Perfect</h1>
-                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm}/>
+                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
             </div>
         )

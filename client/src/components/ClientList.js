@@ -10,6 +10,7 @@ const ClientList = (props) => (
         })}
         <form>
             <input type="text" name="updateInfo"></input>
+            <input type="submit" name="1" value="Submit"></input>
         </form>
     </div>
 )

@@ -16,6 +16,7 @@ class App extends React.Component {
             updateInfo: ''
         };
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.getEntries = this.getEntries.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateClient = this.updateClient.bind(this);
@@ -26,6 +27,10 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        this.getEntries()
+    }
+
+    getEntries() {
         axios.get('/api/photo')
         .then((response) => {
             console.log(response)
@@ -33,9 +38,7 @@ class App extends React.Component {
                 clients: response.data
             })
         })
-        .catch((error) => {
-            console.log(error)
-        });
+        .catch((error) => console.log(error))
     }
 
     handleChange(e) {
@@ -62,7 +65,10 @@ class App extends React.Component {
     deleteClient(e) {
         let identifier = Number(e.target.attributes[0].nodeValue)
         axios.delete('/api/photo', { id: identifier })
-        .then((response) => console.log(response))
+        .then((response) => { 
+            console.log(response)
+            this.getEntries()
+        })
         .catch((error) => console.log(error));
     }
 

@@ -3,6 +3,10 @@ body {
 }
 
 .title {
+    color: white;
     background-color: blue;
-    margin-top: 0px
+    margin-top: 0px;
+    font-size: 54px;
+    font-family: 'Muli', 'Arial', sans-serif;
+    text-align: center;
 }

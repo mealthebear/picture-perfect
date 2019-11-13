@@ -67,7 +67,8 @@ class App extends React.Component {
 
     deleteClient(e) {
         let identifier = Number(e.target.attributes[0].nodeValue)
-        axios.delete('/api/photo', { id: identifier })
+        console.log(identifier);
+        axios.delete('/api/photo', { data: { id: identifier }})
         .then((response) => { 
             console.log(response)
             this.getEntries()

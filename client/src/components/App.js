@@ -1,6 +1,7 @@
 import React from 'react';
 import ClientList from './ClientList.js';
 import ClientForm from './ClientForm.js';
+import Footer from './Footer.js';
 import axios from 'axios';
 
 class App extends React.Component {

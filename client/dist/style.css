@@ -25,8 +25,14 @@ body {
     display: inline-block;
 }
 
+.made-with-love {
+    margin-left: 20px;
+}
+
 .client-form input {
     width: 100px;
     height: 25px;
     font-size: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
 }

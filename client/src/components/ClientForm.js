@@ -2,7 +2,7 @@ import React from 'react';
 
 const ClientForm = (props) => (
     <div>
-        <form onSubmit={props.onSubmit}>
+        <form className="client-form" onSubmit={props.onSubmit}>
             <div>
             <label>First Name</label>
             <input type="text" name="firstName" onChange={props.onChange}></input>

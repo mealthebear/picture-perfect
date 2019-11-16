@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ClientForm = (props) => (
-    <div>
+    <div className="client-form-box">
         <form className="client-form" onSubmit={props.onSubmit}>
             <div className="client-labels">
                 <label>First Name</label>

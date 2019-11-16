@@ -31,10 +31,33 @@ body {
     margin-left: 20px;
 }
 
-.client-form input {
-    width: 100px;
+.client-form-box {
+    /* width: 30%; */
+}
+
+.client-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.client-labels {
+    display: inline-block;
+}
+
+.client-labels label {
+    display: inline-block;
+    width: 100%;
+}
+
+.client-inputs {
+    display: inline-block;
+}
+
+.client-inputs input {
+    width: 50%;
     height: 25px;
     font-size: 15px;
-    margin-left: 20px;
+    border: 1px solid black;
+    /* margin-left: 20px; */
     margin-top: 10px;
 }

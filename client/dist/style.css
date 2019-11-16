@@ -37,30 +37,6 @@ body {
     grid-template: repeat(4, 25%) / 1fr 1fr;
 }
 
-.label-1 {
-    grid-area: 1 / 1 / 2 / 2
-}
-
-.client-form {
-    /* display: inline-block;
-    width: 100%; */
-}
-
-.client-labels {
-    /* display: inline-block;
-    height: 100%; */
-}
-
-.client-labels label {
-    /* display: inline-block;
-    width: 100%; */
-}
-
-.client-inputs {
-    /* display: inline-block;
-    height: 100%; */
-}
-
 .client-inputs input {
     width: 50%;
     height: 25px;
@@ -68,4 +44,8 @@ body {
     border: 1px solid black;
     /* margin-left: 20px; */
     margin-top: 10px;
+}
+
+.client-submit {
+    grid-area: 5 / 1 / 6 / 3;
 }

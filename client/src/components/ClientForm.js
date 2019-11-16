@@ -11,7 +11,7 @@ const ClientForm = (props) => (
                 <input type="text" name="bill" onChange={props.onChange}></input>
                 <label>Description</label>
                 <input type="text" name="description" onChange={props.onChange}></input>
-            <input type="submit" value="Submit"></input>
+            <input className="client-submit" type="submit" value="Submit"></input>
         </form>
     </div>
 )

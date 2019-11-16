@@ -32,9 +32,12 @@ body {
 }
 
 .client-form {
-    display: inline-grid;
+    display: grid;
     width: 50%;
     grid-template: repeat(4, 25%) / 1fr 1fr;
+    margin: 0 auto; /* ( display: grid ) has to be on for ( margin: 0 auto ) to work */
+    /* justify-items: center;
+    align-items: center; */
 }
 
 .client-label {

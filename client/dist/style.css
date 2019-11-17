@@ -78,3 +78,7 @@ body {
 .client-submit:hover {
     color: black;
 }
+
+.client-list-box {
+    font-family: 'Alata', 'Arial', sans-serif;
+}

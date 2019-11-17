@@ -3,10 +3,10 @@ import React from 'react';
 const ClientList = (props) => (
     <div>
         {props.clients.map((client, i) => {
-            return <div key={i}><h2>{client.firstName}{client.lastName}</h2>
-                <div><h3>{client.bill}</h3></div>
-                <div><h4>{client.description}<button>Update</button></h4></div>
-                <div data-identifier={client.id} onClick={props.deleteClient}>Delete Entry</div>
+            return <div className="client-list-box" key={i}><h2 className="client-name">{client.firstName} {client.lastName}</h2>
+                <div><h3 className="client-bill">{client.bill}</h3></div>
+                <div><h4 className="client-description">{client.description}<button className="client-update">Update</button></h4></div>
+                <div data-identifier={client.id} className="client-delete" onClick={props.deleteClient}>Delete Entry</div>
             </div>
         })}
         {/* <form>

@@ -36,6 +36,8 @@ body {
     width: 50%;
     grid-template: repeat(4, 25%) / 1fr 1fr;
     margin: 0 auto; /* ( display: grid ) has to be on for ( margin: 0 auto ) to work */
+    padding: 10px 10px 10px 0px;
+    background-color: #FFFACD;
     /* justify-items: center;
     align-items: center; */
 }
@@ -50,9 +52,15 @@ body {
     border: 1px solid black;
     margin-top: 3px;
     font-size: 20px;
+    text-indent: 10px;
 }
 
 .client-submit {
     grid-area: 5 / 1 / 6 / 3;
     height: 50px;
+    font-size: 24px;
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
 }

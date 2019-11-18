@@ -82,3 +82,14 @@ body {
 .client-list-box {
     font-family: 'Alata', 'Arial', sans-serif;
 }
+
+.client-update {
+    background-color: #FFF44F;
+}
+
+.client-delete {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #DC143C;
+}

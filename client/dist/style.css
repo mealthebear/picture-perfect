@@ -107,15 +107,17 @@ body {
 }
 
 .client-description {
-    font-size: 20px;
     height: 20%;
+    font-size: 20px;
+    text-align: center;
 }
 
-.client-update {
+/* .client-update {
     background-color: #FFF44F;
     font-size: 20px;
     font-family: 'Alata', 'Arial', sans-serif;
-}
+    ******* Implement update button later in ClientList.js *******
+} */
 
 .client-delete {
     display: block;

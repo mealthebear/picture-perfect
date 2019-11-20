@@ -1,4 +1,5 @@
 import React from 'react';
+import HomepageImages from './HomepageImages.js';
 import ClientList from './ClientList.js';
 import ClientForm from './ClientForm.js';
 import Footer from './Footer.js';
@@ -99,6 +100,7 @@ class App extends React.Component {
                 <h1 className="title" onClick={this.checkState}>Picture Perfect</h1>
                 <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+                <HomepageImages />
                 <Footer />
             </div>
         )

@@ -10,7 +10,7 @@ const ClientForm = (props) => (
                 <label className="client-label">Bill</label>
                 <input className="client-input" type="text" name="bill" onChange={props.onChange}></input>
                 <label className="client-label">Description</label>
-                <input className="client-input" type="text" name="description" onChange={props.onChange}></input>
+                <input className="client-input" type="text" name="description" onChange={props.onChange} maxLength="125"></input>
             <input className="client-submit" type="submit" value="Submit"></input>
         </form>
     </div>

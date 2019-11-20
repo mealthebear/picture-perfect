@@ -132,3 +132,7 @@ body {
     background-color: #DC143C;
     cursor: pointer;
 }
+
+.photography-stock {
+    display: block;
+}

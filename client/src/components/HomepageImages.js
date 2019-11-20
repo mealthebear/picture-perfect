@@ -9,7 +9,7 @@ export default class HomepageImages extends Component {
     render() {
         return (
             <div>
-                <img src="http://peaasi.ee/wp-content/uploads/2015/03/om10.jpg"/>
+                <img className="photography-stock" src="http://peaasi.ee/wp-content/uploads/2015/03/om10.jpg"/>
             </div>
         )
     }

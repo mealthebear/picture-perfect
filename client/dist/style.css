@@ -34,6 +34,10 @@ body {
     margin-left: 20px;
 }
 
+.client-form-box {
+    margin-bottom: 75px;
+}
+
 .client-form {
     display: grid;
     width: 50%;

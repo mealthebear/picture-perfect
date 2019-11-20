@@ -98,8 +98,8 @@ class App extends React.Component {
         return (
             <div>
                 <h1 className="title" onClick={this.checkState}>Picture Perfect</h1>
-                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient}/>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient}/>
                 <HomepageImages />
                 <Footer />
             </div>

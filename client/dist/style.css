@@ -94,7 +94,6 @@ body {
 }
 
 .client-name {
-    height: 25%;
     font-size: 30px;
     text-align: center;
 }
@@ -103,11 +102,13 @@ body {
     color: green;
     text-align: center;
     font-size: 26px;
-    height: 15%;
+}
+
+.client-description-box {
+    height: 30%;
 }
 
 .client-description {
-    height: 40%;
     font-size: 16px;
     text-align: center;
 }

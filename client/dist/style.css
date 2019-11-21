@@ -87,6 +87,11 @@ body {
     color: black;
 }
 
+.client-list-container {
+    margin: 20px auto;
+    width: 90%;
+}
+
 .client-list-box {
     display: inline-block;
     border: 5px solid black;

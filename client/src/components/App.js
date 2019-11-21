@@ -95,9 +95,10 @@ class App extends React.Component {
                 insertCounter = 0;
             }
         }
-        for (i = 0; i < whereToInsert.length; i++) {
-            numArray.splice(whereToInsert[i], 0, ',');
+        for (let j = 0; j < whereToInsert.length; j++) {
+            numArray.splice(whereToInsert[j], 0, ',');
         }
+        numArray.splice(0, 0, '$');
         numString = numArray.join('');
         return numString;
     }

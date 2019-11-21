@@ -23,6 +23,7 @@ class App extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateClient = this.updateClient.bind(this);
         this.checkState = this.checkState.bind(this);
+        this.numberToString = this.numberToString.bind(this);
         this.renderUpdate = this.renderUpdate.bind(this);
         this.renderUpdateForm = this.renderUpdateForm.bind(this);
         this.deleteClient = this.deleteClient.bind(this);
@@ -82,6 +83,25 @@ class App extends React.Component {
         console.log(this.state);
     }
 
+    numberToString(num) {
+        let whereToInsert = [];
+        let insertCounter = 0;
+        let numString = num.toString();
+        let numArray = numString.split('');
+        for (let i = numArray.length - 1; i > 0; i--) {
+            insertCounter++;
+            if (insertCounter === 3) {
+                whereToInsert.push(i);
+                insertCounter = 0;
+            }
+        }
+        for (i = 0; i < whereToInsert.length; i++) {
+            numArray.splice(whereToInsert[i], 0, ',');
+        }
+        numString = numArray.join('');
+        return numString;
+    }
+
     renderUpdate() {
         this.setState({
             updateClicked: true
@@ -99,7 +119,7 @@ class App extends React.Component {
             <div>
                 <h1 className="title" onClick={this.checkState}>Picture Perfect</h1>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
-                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient}/>
+                <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient} numberToString={this.numberToString}/>
                 <HomepageImages />
                 <Footer />
             </div>

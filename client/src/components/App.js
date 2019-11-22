@@ -22,7 +22,6 @@ class App extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateClient = this.updateClient.bind(this);
-        this.checkState = this.checkState.bind(this);
         this.numberToString = this.numberToString.bind(this);
         this.renderUpdate = this.renderUpdate.bind(this);
         this.renderUpdateForm = this.renderUpdateForm.bind(this);
@@ -36,7 +35,6 @@ class App extends React.Component {
     getEntries() {
         axios.get('/api/photo')
         .then((response) => {
-            console.log(response)
             this.setState({
                 clients: response.data
             })
@@ -54,8 +52,7 @@ class App extends React.Component {
         e.preventDefault();
         let { firstName, lastName, bill, description } = this.state;
         axios.post('/api/photo', { firstName, lastName, bill, description })
-        .then((response) => { 
-            console.log(response)
+        .then((response) => {
             this.getEntries()
         })
         .catch((error) => console.log('Uh oh! Couldn\'t submit client info!', error));
@@ -70,17 +67,11 @@ class App extends React.Component {
 
     deleteClient(e) {
         let identifier = Number(e.target.attributes[0].nodeValue)
-        console.log(identifier);
         axios.delete('/api/photo', { data: { id: identifier }})
         .then((response) => { 
-            console.log(response)
             this.getEntries()
         })
         .catch((error) => console.log(error));
-    }
-
-    checkState() {
-        console.log(this.state);
     }
 
     numberToString(num) {
@@ -118,7 +109,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="title" onClick={this.checkState}>Picture Perfect</h1>
+                <h1 className="title">Picture Perfect</h1>
                 <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                 <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient} numberToString={this.numberToString}/>
                 <HomepageImages />

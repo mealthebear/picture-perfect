@@ -41,7 +41,7 @@ body {
 .client-form {
     display: grid;
     width: 50%;
-    grid-template: repeat(4, 25%) / 1fr 1fr;
+    grid-template: repeat(6, 50px) / 1fr 1fr;
     margin: 0 auto 50px auto; /* ( display: grid ) has to be on for ( margin: 0 auto ) to work */
     padding: 10px 10px 10px 0px;
     border-radius: 5px;

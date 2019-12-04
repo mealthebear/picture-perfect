@@ -71,7 +71,7 @@ body {
 }
 
 .client-submit {
-    grid-area: 5 / 1 / 6 / 3;
+    grid-area: 6 / 1 / 7 / 3;
     height: 50px;
     font-size: 24px;
     font-family: 'Lato', 'Arial', sans-serif;

@@ -13,6 +13,7 @@ const ClientForm = (props) => (
                 <input className="client-input" type="text" name="description" onChange={props.onChange} maxLength="125"></input>
                 <label className="client-label">Date</label>
                 <div>
+                    {/* TODO: Implement Pop-up Box with Months, Days, & Year */}
                      <div className="client-date">Month</div>
                      <div className="client-date">Day</div>
                      <div className="client-date">Year</div>

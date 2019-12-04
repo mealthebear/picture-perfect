@@ -14,6 +14,10 @@ class App extends React.Component {
             lastName: '',
             bill: null,
             description: '',
+            month: '',
+            day: null,
+            year: null,
+            date: '',
             updateClicked: false,
             updateInfo: ''
         };

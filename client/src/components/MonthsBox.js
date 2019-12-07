@@ -2,10 +2,10 @@ import React from 'react';
 
 const MonthsBox = (props) => (
     <div className="date-container">
-        <p name="January">January</p>
-        <p name="February">February</p>
-        <p name="March">March</p>
-        <p name="April">April</p>
+        <p name="month">January</p>
+        <p name="month">February</p>
+        <p name="month">March</p>
+        <p name="month">April</p>
         <p name="May">May</p>
         <p name="June">June</p>
         <p name="July">July</p>

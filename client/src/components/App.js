@@ -14,7 +14,7 @@ class App extends React.Component {
             lastName: '',
             bill: null,
             description: '',
-            month: '',
+            month: 'Month',
             day: null,
             year: null,
             date: '',
@@ -30,6 +30,7 @@ class App extends React.Component {
         this.renderUpdate = this.renderUpdate.bind(this);
         this.renderUpdateForm = this.renderUpdateForm.bind(this);
         this.deleteClient = this.deleteClient.bind(this);
+        this.changeMonth = this.changeMonth.bind(this);
     }
 
     componentDidMount() {
@@ -98,6 +99,12 @@ class App extends React.Component {
         return numString;
     }
 
+    changeMonth(e) {
+        this.setState({
+            [e.target.attributes['0'].nodeValue]: e.target.innerText
+        })
+    }
+
     renderUpdate() {
         this.setState({
             updateClicked: true
@@ -114,7 +121,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1 className="title">Picture Perfect</h1>
-                <ClientForm onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+                <ClientForm month={this.state.month} changeMonth={this.changeMonth} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                 <ClientList clients={this.state.clients} updateClicked={this.state.updateClicked} updateClient={this.updateClient} renderUpdate={this.renderUpdate} renderUpdateForm={this.renderUpdateForm} deleteClient={this.deleteClient} numberToString={this.numberToString}/>
                 <HomepageImages />
                 <Footer />

@@ -15,7 +15,7 @@ const ClientForm = (props) => (
                 <label className="client-label">Date</label>
                 <div>
                     {/* TODO: Implement Pop-up Box with Months, Days, & Year */}
-                     <div className="client-date">Month <MonthsBox /></div>
+                     <div className="client-date">{props.month} <MonthsBox changeMonth={props.changeMonth}/></div>
                      <div className="client-date">Day</div>
                      <div className="client-date">Year</div>
                 </div>

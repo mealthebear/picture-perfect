@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MonthsBox = (props) => (
-    <div>
+    <div className="date-container">
         <p name="January">January</p>
         <p name="February">February</p>
         <p name="March">March</p>

@@ -99,6 +99,20 @@ body {
     margin-left: 10px;
 }
 
+.date-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    position: absolute;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    z-index: 5;
+}
+
+.date-container p {
+    z-index: 6;
+}
+
 .client-list-container {
     margin: 20px auto;
     width: 90%;

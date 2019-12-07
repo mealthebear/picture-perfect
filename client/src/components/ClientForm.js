@@ -1,4 +1,5 @@
 import React from 'react';
+import MonthsBox from './MonthsBox.js';
 
 const ClientForm = (props) => (
     <div className="client-form-box">
@@ -14,7 +15,7 @@ const ClientForm = (props) => (
                 <label className="client-label">Date</label>
                 <div>
                     {/* TODO: Implement Pop-up Box with Months, Days, & Year */}
-                     <div className="client-date">Month</div>
+                     <div className="client-date">Month <MonthsBox /></div>
                      <div className="client-date">Day</div>
                      <div className="client-date">Year</div>
                 </div>
